@@ -1,0 +1,13 @@
+@media (max-width: 530px) {
+    .container {
+        padding: 0 15px;
+    }
+    .grid,
+    .grid2 {
+        max-width: 450px!important;
+        width: 100%!important;
+    }
+    .item, .item2 {
+        margin: 10px 0;
+    }
+}
