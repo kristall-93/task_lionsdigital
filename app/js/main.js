@@ -17,24 +17,15 @@ $(document).ready(function () {
         fitWidth: true,
         horizontalOrder: true,
     });
-
-    $('#grid2').masonry({
-        itemSelector: '.item2',
-        singleMode: true,
-        isResizable: true,
-        isAnimated: true,
-        animationOptions: {
-            queue: false,
-            duration: 500
-        },
-        fitWidth: true,
-    });
-
-    document.getElementById('grid2').classList.add("grid_loaded_hidden");
 });
 
 // обработка load_more :
 
 $('.load_more').on('click', function () {
-    $('.grid_loaded').slideToggle('slow');
+    $('.hidden:lt(3)').removeClass('hidden');
+    $('#grid').masonry();
+    // убираем кнопку load_more, если все скрытые блоки показаны:
+    if ($('.hidden').length == 0) {
+        $('.load_more').css({ 'display': 'none' })
+    };
 });

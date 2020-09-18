@@ -3,22 +3,24 @@
 @import "_fonts";
 
 .photo {
-    margin-top: 20px;
+    margin-top: 41px;
 }
 
-.grid,
-.grid2 {
+.grid {
     margin: 0 auto;
 }
 
-.item,
-.item2 {
+.item {
     float: left;
-    margin: 11px;
+    margin: 9px 11px;
     max-width: 432px;
     width: 100%;
     img {
         width: 100%;
+    }
+    &.hidden {
+        display: none;
+        height: 0;
     }
 }
 
@@ -37,16 +39,11 @@
     margin: 0 auto;
     display: block;
     width: 243px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     margin-top: 20px;
     border: none;
     outline: none;
     cursor: pointer;
 }
-
-.grid_loaded.grid_loaded_hidden{
-    display: none;
-}
-
 
 @import "_media";
